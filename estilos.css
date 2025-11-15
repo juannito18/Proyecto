@@ -1,0 +1,154 @@
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+header{
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    padding: 60px 20px;
+
+}
+.proyectos{
+    padding: 40px 20px;
+}
+
+.proyectos h2 {
+    color: #4caf50;
+    margin-bottom: 20px;
+
+}
+
+#lista-proyectos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.proyecto{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0,1);
+    transition: transform 0.3s;
+}
+.proyecto:hover{
+    transform: translateY(-5px);
+}
+
+
+button{
+    margin-top: 25px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover{
+     background: #388e3c;
+}
+footer{
+    background: #333;
+    color: white;
+    padding: 30px 10px;
+    margin-top: 50px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: #4caf50;
+    color: white;
+}
+
+.menu-btn{
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.menu {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive: mostrar hamburguesa */
+@media (max-width: 768px) {
+    .menu-btn{
+        display: block;
+    }
+}
+
+.menu{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    color: black;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    width: 150px;
+}
+ .menu a {
+    color: black;
+  }
+
+  .oculto {
+    display: none;
+  }
+.slider{
+    margin: 40px auto;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slider img{
+    width: 100%;
+    display: block;
+}
+
+#contacto form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#contacto input,
+#contacto textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#estado{
+    margin-top: 10px;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
