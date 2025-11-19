@@ -73,14 +73,22 @@ const mensaje = document.getElementById("mensaje").value.trim();
     return;
   }
 
-  if (!email.includes("@") || !email.includes(".")) {
+const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+if (!emailValido) {
     estado.textContent = "Email inválido";
     estado.style.color = "red";
     return;
-  }
+}
+
 
   estado.textContent = "Mensaje enviado correctamente 🎉";
   estado.style.color = "green";
 
   form.reset();
   });
+  document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.add("oculto"); 
+    });
+});

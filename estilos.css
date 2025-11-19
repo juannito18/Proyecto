@@ -82,10 +82,11 @@ footer{
     display: none;
 }
 .menu {
-list-style: none;
-display: flex;
-gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
+
 
 .menu a{
     color: white;
@@ -93,62 +94,80 @@ gap: 20px;
     font-weight: bold;
 }
 
-/* Responsive: mostrar hamburguesa */
-@media (max-width: 768px) {
-    .menu-btn{
-        display: block;
+/* ========================== */
+/*     RESPONSIVE TABLET      */
+/* ========================== */
+@media (max-width: 900px) {
+
+    header {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .slider img {
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    /* Proyectos: 2 columnas en tablet */
+    #lista-proyectos {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.menu{
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: white;
-    color: black;
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    width: 150px;
-}
- .menu a {
-    color: black;
-  }
 
-  .oculto {
-    display: none;
-  }
-.slider{
-    margin: 40px auto;
-    max-width: 900px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.slider img{
-    width: 100%;
-    display: block;
-}
+/* ========================== */
+/*      RESPONSIVE MOBILE     */
+/* ========================== */
+@media (max-width: 600px) {
 
-#contacto form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    body {
+        padding: 0 10px;
+    }
+
+    /* Header */
+    .nav {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Menú hamburguesa se activa */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Menú vertical en móvil */
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        background: white;
+        color: black;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        width: 150px;
+    }
+
+    .menu a {
+        color: black;
+    }
+
+    /* Proyectos: 1 columna en móvil */
+    #lista-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contacto */
+    #contacto form {
+        width: 100%;
+        padding: 10px;
+    }
 }
-
-
-#contacto input,
-#contacto textarea{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-#estado{
-    margin-top: 10px;
-    color: #d32f2f;
-    font-weight: bold;
-}
-
