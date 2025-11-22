@@ -92,3 +92,37 @@ if (!emailValido) {
         menu.classList.add("oculto"); 
     });
 });
+const buscador = document.getElementById("buscador");
+
+buscador.addEventListener("input", (e) => {
+    const texto = e.target.value.toLowerCase();
+
+    document.querySelectorAll(".proyecto").forEach(card => {
+        const nombre = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = nombre.includes(texto) ? "block" : "none";
+    });
+});
+
+/* ===== Lógica Calculadora ===== */
+const display = document.getElementById("display");
+const botonesCalc = document.querySelectorAll(".buttons button");
+
+botonesCalc.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const valor = btn.textContent;
+
+        if (valor === "C") {
+            display.value = "";
+        } 
+        else if (valor === "=") {
+            try {
+                display.value = eval(display.value);
+            } catch {
+                display.value = "Error";
+            }
+        } 
+        else {
+            display.value += valor;
+        }
+    });
+});
